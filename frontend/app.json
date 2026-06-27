@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "UPM Campus Hazard Detective",
+    "slug": "upm-hazard-detective",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#7B1113"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to photograph campus hazards for AI detection.",
+        "NSPhotoLibraryUsageDescription": "This app may access your photo library when selecting hazard images."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#7B1113"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Allow UPM Campus Hazard Detective to access your camera for hazard scanning.",
+          "photosPermission": "Allow UPM Campus Hazard Detective to access your photos."
+        }
+      ]
+    ]
+  }
+}
