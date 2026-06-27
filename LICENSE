@@ -1,43 +1,21 @@
-# UPM Campus Hazard Detective
+MIT License
 
-Real-time campus hazard detection prototype: **Expo SDK 54** mobile frontend + **Flask/YOLO/Gemini** backend.
+Copyright (c) 2026 Amirul Hakimi
 
-## Structure
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-```
-ML_Hazard_App/
-├── backend/          # Flask API, YOLO inference, Gemini recommendations
-│   ├── server.py
-│   ├── models/best.pt
-│   └── .env          # not committed — copy from .env.example
-└── frontend/         # Expo React Native app (Expo Go SDK 54)
-    ├── App.js
-    └── screens/
-```
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-## Quick start
-
-### Backend (laptop)
-
-```bash
-cd backend
-pip install -r requirements.txt
-cp .env.example .env   # add your GEMINI_API_KEY
-python server.py
-```
-
-Server runs at `http://0.0.0.0:5000`.
-
-### Frontend (phone via Expo Go)
-
-1. Set your laptop Wi-Fi IP in `frontend/App.js` (`LAPTOP_IP_ADDRESS`).
-2. `cd frontend && npm install && npx expo start`
-3. Scan the QR code with **Expo Go** (SDK 54) on the same network.
-
-## API
-
-`POST /detect-hazard` — multipart form field `image` → JSON with YOLO metrics, base64 annotated image, and Gemini maintenance recommendation.
-
-## License
-
-MIT — see [LICENSE](LICENSE).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
